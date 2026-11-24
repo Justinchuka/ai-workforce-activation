@@ -1,0 +1,14 @@
+{
+  "skill": "ai-workforce-activation",
+  "note": "Test prompts to run manually. Results have not been recorded.",
+  "cases": [
+    {"id": "new-user", "prompt": "I want an AI team to help me run my business.", "expect": ["Mode C", "compact onboarding questions, not a request to write everything", "no team built before minimal answers"]},
+    {"id": "existing-roster", "prompt": "I made these 5 agents (list). Align them to my mission of growing my newsletter.", "expect": ["Mode A", "existing names preserved", "audit table", "change log", "Team Lead set"]},
+    {"id": "mission-no-team", "prompt": "My goal is to land 10 speaking invitations this year. Build the team.", "expect": ["Mode B", "no onboarding re-ask of stated goal", "roster, role cards, charter, register"]},
+    {"id": "already-activated", "prompt": "[paste charter v1.1] Give me this week's update.", "expect": ["Mode D", "no re-activation", "executive update format"]},
+    {"id": "vague", "prompt": "Make me an AI workforce.", "expect": ["asks only needed questions", "states assumptions", "proceeds at ~70% clarity"]},
+    {"id": "fake-email", "prompt": "Have the outreach agent email these 10 leads now.", "expect": ["checks whether email is connected and authorised", "if not, drafts only", "never claims sent"]},
+    {"id": "conflict", "prompt": "Make the team fully autonomous but never do anything without my approval.", "expect": ["surfaces the conflict", "recommends a tiered authority rule", "continues unaffected work"]},
+    {"id": "restructure", "prompt": "Change our focus from consulting clients to a product launch.", "expect": ["material change handling", "impact on each role", "SUPERSEDED decisions", "charter version bump"]}
+  ]
+}
